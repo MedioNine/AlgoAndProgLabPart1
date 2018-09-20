@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <cs50.h>
+
+int main ()
+{
+    float z;
+    int a,b,c;
+    do
+        {
+            printf("How much?\n");
+            z = GetFloat();
+        }
+     while (z < 0);
+    z = z * 100.0;
+     int g = z;
+    a = g / 25;
+    g = g - a * 25;
+    b = g / 10;
+    g = g - b * 10;
+    c = g / 5;
+    g = g - c * 5;
+    int suma = a + b + c + g;
+    printf ("%d\n", suma);
+    
+}
