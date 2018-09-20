@@ -2,11 +2,11 @@
 #include <math.h>
  int main()
 {
-  float a=1000, b=0.0001;
-  float q,w,e,RESULT;
-  q = pow(a-b,3);
-  w = pow(b,3);
-  e = pow(a,3);
-  RESULT = (q-e)/(w-3*a*a*b-3*b*b*a);
-  printf ("RESULT %f\n",RESULT);
+     float a=1000.0, b=0.0001;
+     float q,w,e,RESULT;
+     q = pow(b,3);
+     w = 3.0*a*a*b;
+     e = 3.0*b*b*a;
+     RESULT = (-q-w+e)/(q-w-e);
+     printf ("RESULT %.27f\n",RESULT);
 }
