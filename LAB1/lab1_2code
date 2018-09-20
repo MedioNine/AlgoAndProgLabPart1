@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main()
+{
+  int m,n,r,t,y;
+  scanf ("%d %d",m,n);
+  r = m-++n;
+  t = m++<++n;
+  y = n--<--m;
+  printf ("%d\n", r);
+  printf ("%d\n", t);
+  printf ("%d\n", y);
+  }
