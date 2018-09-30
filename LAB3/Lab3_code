@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int factorial (int f)
+{
+    int jojo = 1;
+    int i;
+    for(i = 1; i<=f; i++);
+    jojo = jojo * i; 
+    return jojo;
+}
+
+int main ()
+{
+    float summa = 1.0, summa_e = 1.0, e = 0.0001;
+     float k;
+ for ( float x = 0.1; x<=1.0; x +=0.1)
+      {
+         for (int n = 1.0; n<=10.0; n++)
+         {
+             k = (pow(-1,n) * pow(x,n))/factorial(2*n);
+             if (k>e || k<e) 
+                 summa_e += k;
+             summa += k;
+         }
+     printf ("X=%.1f SN=%f SE=%.4f Y=%f\n", x, summa, summa_e, cos(x));
+      }
+}
