@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <math.h>
 
 int main ()
 {
@@ -12,7 +13,7 @@ int main ()
         }
      while (z < 0);
     z = z * 100.0;
-     int g = z;
+     int g = round (z);
     a = g / 25;
     g = g - a * 25;
     b = g / 10;
