@@ -12,13 +12,13 @@ int factorial (int f)
 
 int main ()
 {
-    float summa = 1.0, summa_e = 1.0, e = 0.0001;
-     float k;
- for ( float x = 0.1; x<=1.0; x +=0.1)
+    double summa = 1.0, summa_e = 1.0, e = 0.0001;
+     double k;
+ for ( double x = 0.1; x<=1.0; x +=(1.0-0.1)/10.0)
       {
          for (int n = 1.0; n<=10.0; n++)
          {
-             k = (pow(-1,n) * pow(x,n))/factorial(2*n);
+             k = (pow(-1,n) * pow(x,2*n))/factorial(2*n);
              if (k>e || k<e) 
                  summa_e += k;
              summa += k;
