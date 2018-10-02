@@ -8,10 +8,11 @@ int main( int argv, string argc[])
 {
     if (argv == 2)
     {
-        
         int k = atoi (argc[1]);
         k = k % 26;
-        string f = GetString();
+      printf("write: ");
+      string f = GetString();
+      printf("ciphertext: ");
         int l = strlen(f);     
         for (int  i = 0; i < l; i++)
             {   
