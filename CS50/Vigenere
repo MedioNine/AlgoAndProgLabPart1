@@ -1,0 +1,85 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int main( int argv, string argc[])
+{
+  
+    if (argv == 2)
+       {
+         int t = 0, huh = strlen(argc[1]);
+    do
+    {
+     if (!(isalpha(argc[1][t]))) return 1;
+        t++;
+    }
+    while (t<huh);
+        int key = strlen (argc[1]);
+       
+       int k;
+         
+      printf("write: ");
+    
+      string f;
+          f = GetString();
+   
+      int l = strlen (f);
+      printf("ciphertext: ");
+        
+        
+        for (int  i = 0, o = 0; i < l; i++,o++)
+            {   
+            if (!(isalpha(f[i]))) o--;
+                    if (o==key)
+                    {
+                    o = 0;
+                    k = (int) (toupper(argc[1][o]) - 65);
+                    }
+                    k = (int) (toupper(argc[1][o]) - 65);
+             if isalpha(f[i])
+             { 
+              if (islower(f[i])) 
+                 { 
+                      if (((int)f[i]+k)>=123)  
+                       {
+                           if (i==l-1) 
+                            printf ("%c\n",(char) f[i] + k - 26);
+                                else printf ("%c",(char) f[i] + k - 26);
+                       }
+                    else 
+                        {
+                            if (i==l-1) 
+                              printf("%c\n", (char) f[i] + k);
+                                else  printf("%c", (char) f[i] + k); 
+                        } 
+                
+                  }
+              if (isupper( f[i])) 
+                  {
+                        if (((int)f[i]+k)>=91)  
+                          {
+                              if (i==l-1)  
+                                printf ("%c\n",(char) f[i] + k - 26);
+                                  else  printf ("%c",(char) f[i] + k - 26);
+                          }
+                    else
+                           { 
+                              if (i==l-1)
+                                printf("%c\n", (char) f[i] + k); 
+                                  else printf("%c", (char) f[i] + k); 
+                           }
+                  }
+              }
+              else  {
+                      if (i==l-1) 
+                      printf("%c\n",f[i]);
+                      else printf("%c",f[i]);
+                     }
+            }
+    return 0;
+    }
+    else return 1;
+}
+
