@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 void sort(int k, int b, char* a)
 {
@@ -37,7 +38,7 @@ int k = 0, l = 0;
   //сортування слів відносно коду ASCII
     while( a[k]!='\n'){
         k++;
-        if  (a[k] == ' ') {
+        if  (!isalpha(a[k])) {
             sort(l, k, a);
             l = k+1;};
 
